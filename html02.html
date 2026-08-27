@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+    <style>
+        table#minimo, table#minimo th, table#minimo td {
+            border: 1px solid rgba(13, 175, 62, 0.345);
+            border-collapse: collapse;
+            padding: 15px;
+            margin: auto;
+        } 
+        /* Estilo para tabla de consolas */
+        #consolas {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80%;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+        }
+        #consolas td, #consolas th {
+            font-size: 1.2rem;
+            border: 1px solid #98bf21;
+            padding: 3px 7px 2px 7px;
+        }
+        #consolas th {
+            font-size: 1.1rem;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: #a7c942;
+            color: #ffffff;
+        }
+        #consolas tr.renglon1 td {
+            color: #000000;
+            background-color: #EAF2D3;
+        }
+        #consolas tr.renglon2 td {
+            color: black;
+            background-color: white;
+        }
+        div.centrar {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tablas</h2>
+    <h3>Tabla 1. Encuerada (sin CSS)</h3>
+    <table style="margin: auto;">
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+            <th>Encabezado 4</th>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+    </table>
+
+    <h3>Tabla 2. Estilo mínimo</h3>
+    <table id="minimo">
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+            <th>Encabezado 4</th>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+    </table>
+
+    <h3>Tabla con más estilo</h3>
+    <!-- table#consolas>tr>th*5 -->
+    <table id="consolas">
+        <tr>
+            <th>Generación</th>
+            <th>Nintendo</th>
+            <th>SEGA</th>
+            <th>Sony</th>
+            <th>Microslop</th>
+        </tr>
+        <!-- tr.renglon1>td*5 -->
+        <tr class="renglon1">
+            <td>3</td>
+            <td>NES</td>
+            <td>Master System</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="renglon2">
+            <td>4</td>
+            <td>Super NES</td>
+            <td>Genesis/Mega Drive</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="renglon1">
+            <td>5</td>
+            <td>Nintendo 64</td>
+            <td>Saturn</td>
+            <td>Playstation</td>
+            <td></td>
+        </tr>
+        <tr class="renglon2">
+            <td>6</td>
+            <td>GameCube</td>
+            <td>Dreamcast</td>
+            <td>Playstation 2</td>
+            <td>XBOX</td>
+        </tr>
+        <tr class="renglon1">
+            <td>7</td>
+            <td>Wii</td>
+            <td></td>
+            <td>Playstation 3</td>
+            <td>XBOX 360</td>
+        </tr>
+        <tr class="renglon2">
+            <td>8</td>
+            <td>WiiU</td>
+            <td></td>
+            <td>Playstaion 4</td>
+            <td>XBOX One</td>
+        </tr>
+        <tr class="renglon1">
+            <td>9</td>
+            <td>Switch</td>
+            <td></td>
+            <td>Playstation 5</td>
+            <td>XBOX Series S/X</td>
+        </tr>
+    </table>
+
+    <h3>Imágenes</h3>
+    <div class="centrar"><img width="100" src="https://yt3.googleusercontent.com/6ZXOtv-0G3CEEsqLmdno2viz32rQEKx4EVrZZGwICGvo5qfCtkljMRZAkj-MJeXblFYSIWN9=s900-c-k-c0x00ffffff-no-rj" alt="Algo malio sal"></div>
+    <div class="centrar"><a href="https://www.elmundo.es/como/2026/08/26/6a8edd36fc6c8339078b456e.html"><img src="assets/17877488338634.webp" alt="No hubo aura" height="200"></a></div>
+
+    <h3>Enlaces</h3>
+    <a href="html01.html">HTML básico</a>
+    <a href="html03.html#Accusamus">Accusamus</a>
+    <a href="https://www.apple.com/mx/" target="_blank">Apel</a>
+    <a href="mailto:mmendez@anahuac.mx">Quejas acerca del sitio</a>
+
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
