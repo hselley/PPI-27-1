@@ -36,3 +36,21 @@ table#minimo, table#minimo th, table#minimo td {
 div.centrar {
     text-align: center;
 }
+a {
+    color: #a7c942;
+    padding: 14px 25px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid rgb(210, 252, 3);
+    display: inline-block;
+    background-color: rgb(154, 55, 55);
+    border-radius: 10px;
+}
+
+/* Comportamiento cuando el cursor está sobre algún enlace */
+a:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 20px;
+}
