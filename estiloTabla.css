@@ -1,0 +1,38 @@
+table#minimo, table#minimo th, table#minimo td {
+    border: 1px solid rgba(13, 175, 62, 0.345);
+    border-collapse: collapse;
+    padding: 15px;
+    margin: auto;
+} 
+/* Estilo para tabla de consolas */
+#consolas {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+#consolas td, #consolas th {
+    font-size: 1.2rem;
+    border: 1px solid #98bf21;
+    padding: 3px 7px 2px 7px;
+}
+#consolas th {
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #a7c942;
+    color: #ffffff;
+}
+#consolas tr.renglon1 td {
+    color: #000000;
+    background-color: #EAF2D3;
+}
+#consolas tr.renglon2 td {
+    color: black;
+    background-color: white;
+}
+div.centrar {
+    text-align: center;
+}
