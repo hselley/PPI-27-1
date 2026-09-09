@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de imágen</title>
+    <style>
+        .centrar {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function cambiarImagen() {
+            x = document.getElementById("miImagen");
+            if(x.src.match("bulbon")) {
+                x.src = "assets/pic_bulboff.gif"
+            } else {
+                x.src = "assets/pic_bulbon.gif"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Modificación de HTML con JS</h1>
+    <div class="centrar">
+        <img id="miImagen" onclick="cambiarImagen()" src="assets/pic_bulboff.gif" alt="Foco apagado">
+    </div>
+    <p><span onclick="cambiarImagen()">Presione</span> la imágen para cambiarla</p>
+</body>
+</html>
