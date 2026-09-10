@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Registro</title>
+    <link rel="stylesheet" href="kirk.css">
+    <script src="js/registroVG.js"></script>
+</head>
+<body>
+    <h1>Registro de Videojuegos</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"> <br>
+        <label for="pub">Publisher:</label>
+        <input type="text" name="pub" id="pub"> <br>
+        
+        <h3>Consola:</h3>
+        <input type="checkbox" name="xbox" id="xbox">
+        <label for="xbox">XBOX Series S/X</label> <br>
+        <input type="checkbox" name="ps5" id="ps5">
+        <label for="ps5">Playstation 5</label> <br>
+        <input type="checkbox" name="switch2" id="switch2">
+        <label for="swicth2">Nintendo Swicth 2</label>
+
+        <h3>Estado del juego:</h3>
+        <input type="radio" name="estado" id="nuevo">
+        <label for="nuevo">Nuevo</label> <br>
+        <input type="radio" name="estado" id="usado">
+        <label for="usado">Usado</label>
+
+        <h3>Portada:</h3>
+        <input type="file" name="portada" id="portada">
+
+        <h3>Fecha de adquisición:</h3>
+        <input type="date" name="fech" id="fecha">
+    </form>
+    <button type="button" onclick="registro()">Registrar</button>
+    <tabla id="consolas"></tabla>
+</body>
+</html>
