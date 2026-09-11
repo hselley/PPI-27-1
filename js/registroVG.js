@@ -7,6 +7,6 @@ function registro() {
     if(document.getElementById("nombre").value == false) {
         alert("Nombre vacío.");
     } else {
-        document.getElementById("vg").innerHTML = contenido;
+        document.getElementById("consolas").innerHTML = contenido;
     }
 }
