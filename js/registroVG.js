@@ -7,6 +7,11 @@ function registro() {
     if(document.getElementById("nombre").value == false) {
         alert("Nombre vacío.");
     } else {
+        contenido += "<tr>";
+        // Nombre del juego
+        contenido = contenido + "<td>" + document.getElementById("nombre").value + "</td>";
+        
+        contenido += "</tr>";
         document.getElementById("consolas").innerHTML = contenido;
     }
 }
