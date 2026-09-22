@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracción Radio #1</title>
+</head>
+<body>
+    <h1>Extracción Radio #1</h1>
+    <p>Extracción del valor del input tipo <code>radio</code></p>
+    <h3>Elija su género:</h3>
+    <form action="">
+        <input type="radio" name="genero" id="mas" value="Masculino"> 
+        <label for="mas">Masculino</label><br>
+        <input type="radio" name="genero" id="fem" value="Femenino"> 
+        <label for="fem">Femenino</label><br>
+        <input type="radio" name="genero" id="otro" value="Otro"> 
+        <label for="otro">Otro</label><br>
+        <input type="radio" name="genero" id="nulo" value="Nulo"> 
+        <label for="nulo">Me ofende la elección</label><br>
+    </form>
+    <button onclick="extraccion()">Seleccionar</button>
+    <p id="resultado"></p>
+</body>
+</html>
