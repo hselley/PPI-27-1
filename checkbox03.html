@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracción ckeckbox #3</title>
+    <script>
+        function extraccion() {
+            var trans = document.getElementsByName("transporte");
+            var salida = document.getElementById("resultado");
+            var cad = "";
+            var transporte;
+
+            // Tercer método: La forma perfecta de Cell
+            cell = document.querySelectorAll('input[name=transporte]:checked');
+            for(cellJr of cell) {
+                transporte = cellJr.value;
+                console.log(transporte);
+                cad = cad + "<p>" + transporte + "</p>";
+            }
+
+            if(transporte != null) {
+                salida.innerHTML = cad;
+            } else {
+                salida.innerHTML = "Seleccione una opción";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Medio de transporte</h1>
+    <p>Seleccione su medio de transporte predilecto.</p>
+    <form action="">
+        <input type="checkbox" name="transporte" value="Automovil" id="auto"> 
+        <label for="auto">Automóvil</label> <br>
+        <input type="checkbox" name="transporte" value="Motocicleta" id="moto">
+        <label for="moto">Motocicleta</label> <br>
+        <input type="checkbox" name="transporte" value="Bicicleta" id="bici">
+        <label for="bici">Bicicleta</label> <br>
+        <input type="checkbox" name="transporte" value="Traxion" id="traxi">    
+        <label for="traxi">Traxion</label> <br>
+        <input type="checkbox" name="transporte" value="Otro" id="otro"> 
+        <label for="otro">Otro</label> <br>
+    </form>
+    <button onclick="extraccion()">Seleccionar</button>
+    <p id="resultado"></p>
+</body>
+</html>

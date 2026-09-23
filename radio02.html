@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extracción Radio #1</title>
+    <title>Extracción Radio #2</title>
     <script>
         function extraccion() {
             var gen = document.getElementsByName("genero");
@@ -11,15 +11,14 @@
             var cad = "";
             var genero;
 
-            // Primer método: clásico
-            for(i=0; i<gen.length; i++) {
-                if(gen[i].checked) {
-                    genero = gen[i].value;
-                    console.log(genero);
-                    cad = "Su genero es " + genero + ".";
-                    console.log(cad);
-                }
+            // Segundo método: mejora del clásico
+            x = document.querySelector('input[name=genero]:checked');
+            if(x!=null) {
+                genero = x.value;
+                console.log(genero);
+                cad = "Su genero es " + genero + ".";
             }
+            
 
             if(genero != null) {
                 salida.innerHTML = cad;
@@ -30,7 +29,7 @@
     </script>
 </head>
 <body>
-    <h1>Extracción Radio #1</h1>
+    <h1>Extracción Radio #2</h1>
     <p>Extracción del valor del input tipo <code>radio</code></p>
     <h3>Elija su género:</h3>
     <form action="">
