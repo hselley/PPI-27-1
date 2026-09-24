@@ -38,8 +38,29 @@ function registro() {
         // Portada
         contenido = contenido + "<td>" + document.getElementById("portada").value + "</td>";
 
+        // Agregar el renglón en la tabla
         contenido += "</tr>";
         document.getElementById("consolas").innerHTML = contenido;
         estilo++;
+
+        // Borrar los campos del formulario
+        document.getElementById("nombre").value = '';
+        document.getElementById("pub").value = '';
+        
+        // Limpiamos input checkbox
+        cell = document.querySelectorAll('input[name=consola]:checked');
+        for(cellJr of cell) {
+            cellJr.checked = false;  
+            console.log(cellJr.checked);
+        }
+        
+        // Limpiamos input radio
+        document.querySelectorAll('input[name=estado]:checked') = false;
+
+        // Limpiamos portada
+        document.getElementById("portada").value = '';
+
+        // Limpiamos fecha
+        document.getElementById("fecha").value = '';
     }
 }
