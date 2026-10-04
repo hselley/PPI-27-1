@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Reloj en retroceso</h1>
+    <p>Este programa hace una cuenta regresiva por el tiempo que usted indique.</p>
+    <p>Introduzca el tiempo en segundos que desea para hacer la cuenta regresiva.</p>
+    <input type="number" id="tiempo" min="0" style="width: 25%;">
+    <button id="boton">Iniciar cuenta regresiva</button>
+    <h2 class="center" id="contador"></h2>
+    <script>
+        // ------------------------------------------------------------------------------------------
+        // Aquí se obtienen accesos a los elementos que manipulará JavaScript
+        const inputSegundos = document.getElementById('tiempo');
+        const boton = document.getElementById('boton');
+        const mostrar = document.getElementById('contador');
+        // ------------------------------------------------------------------------------------------
+
+        // ------------------------------------------------------------------------------------------
+        // addEventListener 'escuchará' el evento 'click', cuando esto ocurra 
+        // ejecutará lo que contiene la función.
+        boton.addEventListener('click', function() {
+            
+            // Se obtiene el valor del input y se convierte en un número entero
+            let tiempoRestante = parseInt(inputSegundos.value);
+
+            // Se muestra de inmediato el tiempo en el <h2>
+            mostrar.textContent = tiempoRestante;
+
+            // Se deshabilitan el botón y el input para evitar duplicar el conteo
+            boton.disabled = true;
+            inputSegundos.disabled = true;
+
+            // Se crea el intervalo de tiempo con el método nativo 'setInterval',
+            // este método le pide al navegador web que ejecute una función de manera 
+            // repetitiva e indefinida con el periodo indicado, en este caso 1000 milisegundos.
+            const intervalo = setInterval(function() {
+
+                // Se resta 1 segundo para efectuar la cuenta regresiva
+                tiempoRestante--;
+
+                // Se actualiza el h2
+                mostrar.textContent = tiempoRestante;
+
+                // Se verifica si el tiempo se ha acabado
+                if (tiempoRestante <= 0) {
+                    
+                    // Si es así, se detiene 'setInterval' para que no siga corriendo indefinidamente
+                    clearInterval(intervalo);
+                    
+                    // Mensaje final
+                    mostrar.textContent = "¡Tiempo terminado!";
+                }
+
+            }, 1000); // 1000 milisegundos = 1 segundo
+        });
+        // ------------------------------------------------------------------------------------------
+    </script>
+    </body>
+</html>
